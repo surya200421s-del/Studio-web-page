@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: clamp(15px,2vw,18px);
+}
+@mixin flexcolom{
+    display: flex;
+    flex-direction: column;
+}
+@font-face {
+    font-family: font1;
+    src: url(/fonts/Regular.woff);
+}
+@font-face {
+    font-family: font2;
+    src: url(/fonts/Light.woff);
+}
+@font-face {
+    font-family: font3;
+    src: url(/fonts/38.woff2);
+}
+section{
+    max-width: 1600px;
+}
+main{
+    width: 100%;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141414;
+
+    #one{
+        width: 100%;
+        @include flexcolom();
+        background-color: #141414;
+        padding: 4rem 1rem;
+        gap: 1rem;
+
+        #top{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+        #bottom{
+            width: 100%;
+            @include flexcolom();
+            color: white;
+            gap: 4rem;
+            background-color: rgb(33, 33, 33);
+             padding: 2rem;
+
+            #text{
+                width: 100%;
+                @include flexcolom();
+                justify-content: space-around;
+                gap: 1.3rem;
+
+
+                h1{
+                    font-weight: 500;
+                    font-size: 2.3rem;
+                    font-family: font1;
+                    color: rgb(218, 215, 215);
+                    line-height: 2.7rem;
+                    text-transform: uppercase;
+                }
+                p{
+                    font-weight: 300;
+                    font-family: font2;
+                    font-size: 1.3rem;
+                    opacity: 0.5;
+                }
+                
+                #button{
+                    width: 100%;
+
+                    span{
+                    padding: 0.5rem 0.6rem;
+                    display: inline-block;
+                    width: fit-content;
+                    border-radius: 5.4rem;
+                    border: 1px solid white;
+                    opacity: 0.5;
+
+                     h2{
+                         display: inline;
+                         color: white;
+                         font-size: 1.4rem;
+                         font-weight: 400;
+                       }
+                    }
+
+                    h2{
+                        display: inline;
+                        font-family: font3;
+                        font-weight: 300;
+                    }
+                
+                }
+            }
+        }
+
+    }
+}
+@media (min-width:700px) {
+    main{
+        #one{
+            #bottom{
+                #text{
+                    padding: 1rem;
+                    h1{
+                        font-size: 4rem;
+                        line-height: 4.8rem;
+                        font-weight: 600;
+                    }
+                    p{
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1000px){
+    main{
+        #one{
+            flex-direction: row;
+            padding: 3rem 1rem;
+
+            #top{
+                width: 50%;
+                height: 50%;
+
+                img{
+                    border-radius: 1rem;
+                    width: 100%;
+                }
+            }
+            #bottom{
+                width: 50%;
+                padding: 1rem 1rem;
+                justify-content: space-between;
+                border-radius: 1rem;
+                gap: 1rem;
+
+                #text{
+                    
+                    h1{
+                        font-size: 3rem;
+                        line-height: 3.2rem;
+                        font-weight: 500;
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-weight: 200;
+                    }
+
+                    #button{
+                        span{
+                            
+                            h2{
+                                font-size: 0.8rem;
+                            }
+                        }
+                        h2{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+   
+@media (min-width:1460px){
+    main{
+        #one{
+            flex-direction: row;
+            padding: 3rem 1rem;
+
+            #top{
+                width: 50%;
+                height: 50%;
+
+                img{
+                    border-radius: 1rem;
+                    width: 100%;
+                }
+            }
+            #bottom{
+                width: 50%;
+               padding: 3rem 3rem;
+                justify-content: space-between;
+                border-radius: 1rem;
+                gap: 8rem;
+
+                #text{
+                    
+                    h1{
+                        font-size: 3.4rem;
+                        line-height: 4rem;
+                        font-weight: 500;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 200;
+                    }
+
+                    #button{
+                        span{
+                            
+                            h2{
+                                font-size: 0.8rem;
+                            }
+                        }
+                        h2{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+   
