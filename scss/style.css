@@ -29,15 +29,13 @@ section {
 main {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #141414;
+  flex-direction: column;
 }
 main #one {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #141414;
+  background-color: rgb(15, 14, 14);
   padding: 4rem 1rem;
   gap: 1rem;
 }
@@ -60,8 +58,7 @@ main #one #bottom #text {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 1.3rem;
+  gap: 2rem;
 }
 main #one #bottom #text h1 {
   font-weight: 500;
@@ -100,6 +97,120 @@ main #one #bottom #text #button h2 {
   font-family: font3;
   font-weight: 300;
 }
+main #two {
+  width: 100%;
+  background-color: rgb(15, 14, 14);
+  display: flex;
+  flex-direction: column;
+}
+main #two #two-top, main #two #two-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-family: font3;
+  text-align: center;
+}
+main #two #two-top .element, main #two #two-bottom .element {
+  width: auto;
+  padding: 1rem;
+}
+main #two #two-top .element small, main #two #two-bottom .element small {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+main #two #two-top .element h1, main #two #two-bottom .element h1 {
+  font-size: 2.4rem;
+  opacity: 0.9;
+  font-weight: 400;
+  font-family: font2;
+}
+main #three {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 14, 14);
+  padding: 1rem;
+  gap: 1rem;
+}
+main #three #three-top {
+  width: 100%;
+}
+main #three #three-top img {
+  width: 100%;
+}
+main #three #three-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 4rem;
+  background-color: rgb(33, 33, 33);
+  padding: 2rem;
+}
+main #three #three-bottom h2 {
+  font-weight: 500;
+  font-size: 2.3rem;
+  font-family: font1;
+  color: rgb(218, 215, 215);
+  line-height: 2.7rem;
+  text-transform: uppercase;
+}
+main #three #three-bottom #three-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main #three #three-bottom #three-text p {
+  font-weight: 300;
+  font-family: font2;
+  font-size: 1.3rem;
+  opacity: 0.5;
+}
+main #four {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 14, 14);
+  padding: 1rem;
+  gap: 1rem;
+}
+main #four #four-top {
+  width: 100%;
+}
+main #four #four-top img {
+  width: 100%;
+}
+main #four #four-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 2rem;
+  background-color: rgb(33, 33, 33);
+  padding: 2rem;
+}
+main #four #four-bottom h2 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  font-family: font1;
+  color: rgb(218, 215, 215);
+  line-height: 2.7rem;
+  text-transform: uppercase;
+}
+main #four #four-bottom #four-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+main #four #four-bottom #four-text p {
+  font-weight: 300;
+  font-family: font2;
+  font-size: 1.3rem;
+  opacity: 0.5;
+}
 
 @media (min-width: 700px) {
   main #one #bottom #text {
@@ -112,6 +223,26 @@ main #one #bottom #text #button h2 {
   }
   main #one #bottom #text p {
     font-size: 1.7rem;
+  }
+  main #two #two-top .element small, main #two #two-bottom .element small {
+    font-size: 1.6rem;
+  }
+  main #two #two-top .element h1, main #two #two-bottom .element h1 {
+    font-size: 3rem;
+  }
+  main #three #three-bottom #three-text {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  main #three #three-bottom #three-text .para p {
+    font-size: 2rem;
+  }
+  main #four #four-bottom #four-text {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  main #four #four-bottom #four-text .para p {
+    font-size: 2rem;
   }
 }
 @media (min-width: 1000px) {
@@ -149,6 +280,49 @@ main #one #bottom #text #button h2 {
   main #one #bottom #text #button h2 {
     font-size: 1.2rem;
   }
+  main #two {
+    flex-direction: row;
+  }
+  main #two #two-top .element small, main #two #two-bottom .element small {
+    font-size: 1rem;
+  }
+  main #two #two-top .element h1, main #two #two-bottom .element h1 {
+    font-size: 2rem;
+  }
+  main #three {
+    flex-direction: row-reverse;
+  }
+  main #three #three-top {
+    width: 50%;
+  }
+  main #three #three-bottom {
+    padding: 1rem 1rem;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    gap: 1rem;
+  }
+  main #three #three-bottom #three-text {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  main #three #three-bottom #three-text .para p {
+    font-size: 0.9rem;
+  }
+  main #four {
+    flex-direction: row;
+  }
+  main #four #four-bottom {
+    padding: 4rem 4rem;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    gap: 1rem;
+  }
+  main #four #four-bottom #four-text {
+    flex-direction: row;
+  }
+  main #four #four-bottom #four-text .para p {
+    font-size: 0.9rem;
+  }
 }
 @media (min-width: 1460px) {
   main #one {
@@ -184,5 +358,35 @@ main #one #bottom #text #button h2 {
   }
   main #one #bottom #text #button h2 {
     font-size: 1.2rem;
+  }
+  main #two #two-top .element small, main #two #two-bottom .element small {
+    font-size: 1.6rem;
+  }
+  main #two #two-top .element h1, main #two #two-bottom .element h1 {
+    font-size: 3rem;
+  }
+  main #three #three-top img {
+    border-radius: 2rem;
+  }
+  main #three #three-bottom {
+    width: 50%;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+  }
+  main #three #three-bottom h2 {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+  main #four #three-top img {
+    border-radius: 2rem;
+  }
+  main #four #three-bottom {
+    width: 50%;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+  }
+  main #four #three-bottom h2 {
+    font-size: 3rem;
+    line-height: 3.4rem;
   }
 }/*# sourceMappingURL=style.css.map */

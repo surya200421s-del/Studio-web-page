@@ -29,15 +29,12 @@ section{
 }
 main{
     width: 100%;
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #141414;
+    @include flexcolom();
 
     #one{
         width: 100%;
         @include flexcolom();
-        background-color: #141414;
+        background-color: rgb(15, 14, 14);
         padding: 4rem 1rem;
         gap: 1rem;
 
@@ -59,8 +56,7 @@ main{
             #text{
                 width: 100%;
                 @include flexcolom();
-                justify-content: space-around;
-                gap: 1.3rem;
+                gap: 2rem;
 
 
                 h1{
@@ -108,7 +104,138 @@ main{
         }
 
     }
+
+    #two{
+        width: 100%;
+        background-color: rgb(15, 14, 14);
+        @include flexcolom();
+        
+
+       #two-top,#two-bottom{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+       color: white;
+       font-family: font3;
+       text-align: center;
+
+
+        .element{
+            width: auto;
+            padding: 1rem;
+
+            small{
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                opacity: 0.5;
+            }
+            
+            h1{
+                font-size: 2.4rem;
+                opacity: 0.9;
+                font-weight: 400;
+                font-family: font2;
+            }
+        }
+       }
+    }
+
+    #three{
+        width: 100%;
+        @include flexcolom();
+        background-color: rgb(15, 14, 14);
+        padding:1rem;
+        gap: 1rem;
+
+        #three-top{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+        #three-bottom{
+            width: 100%;
+            @include flexcolom();
+            color: white;
+            gap: 4rem;
+            background-color: rgb(33, 33, 33);
+            padding: 2rem;
+
+            h2{
+                font-weight: 500;
+                font-size: 2.3rem;
+                font-family: font1;
+                color: rgb(218, 215, 215);
+                line-height: 2.7rem;
+                text-transform: uppercase;
+                }
+
+
+            #three-text{
+                width: 100%;
+                @include flexcolom();
+                
+                p{
+                    font-weight: 300;
+                    font-family: font2;
+                    font-size: 1.3rem;
+                    opacity: 0.5;
+                }
+
+            }
+        }
+    }
+    #four{
+        width: 100%;
+        @include flexcolom();
+        background-color: rgb(15, 14, 14);
+        padding:1rem;
+        gap: 1rem;
+
+        #four-top{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        #four-bottom{
+            width: 100%;
+            @include flexcolom();
+            color: white;
+            gap: 2rem;
+            background-color: rgb(33, 33, 33);
+            padding: 2rem;
+
+            h2{
+                font-weight: 500;
+                font-size: 2.4rem;
+                font-family: font1;
+                color: rgb(218, 215, 215);
+                line-height: 2.7rem;
+                text-transform: uppercase;
+            }
+
+            #four-text{
+                width: 100%;
+                @include flexcolom();
+                gap: 3rem;
+
+                p{
+                    font-weight: 300;
+                    font-family: font2;
+                    font-size: 1.3rem;
+                    opacity: 0.5;
+                }
+
+            }
+        }
+    }
 }
+
+
 @media (min-width:700px) {
     main{
         #one{
@@ -122,6 +249,59 @@ main{
                     }
                     p{
                         font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+
+        #two{
+           
+            #two-top,#two-bottom{
+
+                .element{
+
+                  small{
+                    font-size: 1.6rem;
+                  }
+
+                  h1{
+                    font-size: 3rem;
+                  }
+                }
+            }
+        }
+
+        #three{
+
+            #three-bottom{
+
+                #three-text{
+                    flex-direction: row;
+                    gap: 3rem;
+
+                    .para{
+
+                        p{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #four{
+
+            #four-bottom{
+
+                #four-text{
+                    flex-direction: row;
+                    gap: 3rem;
+
+                    .para{
+
+                        p{
+                            font-size: 2rem;
+                        }
                     }
                 }
             }
@@ -171,6 +351,72 @@ main{
                         }
                         h2{
                             font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #two{
+            flex-direction: row;
+
+            #two-top,#two-bottom{
+
+                .element{
+
+                  small{
+                    font-size: 1rem;
+                  }
+
+                  h1{
+                    font-size: 2rem;
+                  }
+                }
+            }
+        }
+
+        #three{
+            flex-direction: row-reverse;
+
+            #three-top{
+                width: 50%;
+            }
+            #three-bottom{
+                padding: 1rem 1rem;
+                justify-content: space-evenly;
+                border-radius: 1rem;
+                gap: 1rem;
+
+                #three-text{
+                    flex-direction: row;
+                    gap: 3rem;
+
+                    .para{
+
+                        p{
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #four{
+            flex-direction: row;
+            
+             #four-bottom{
+                padding: 4rem 4rem;
+                justify-content: space-evenly;
+                border-radius: 1rem;
+                gap: 1rem;
+
+                #four-text{
+                    flex-direction: row;
+
+                    .para{
+
+                        p{
+                            font-size: 0.9rem;
                         }
                     }
                 }
@@ -227,6 +473,62 @@ main{
                 }
             }
         }
+
+        #two{
+            #two-top,#two-bottom{
+
+                .element{
+
+                  small{
+                    font-size: 1.6rem;
+                  }
+
+                  h1{
+                    font-size: 3rem;
+                  }
+                }
+            }
+        }
+
+        #three{
+             
+            #three-top{
+                
+                img{
+                    border-radius: 2rem;
+                }
+            }
+
+            #three-bottom{
+                width: 50%;
+               padding: 2rem 3rem;
+                border-radius: 1rem;
+
+                h2{
+                    font-size: 3rem;
+                    line-height: 3.4rem;
+                }
+            }
+        }
+
+        #four{
+            #three-top{
+                
+                img{
+                    border-radius: 2rem;
+                }
+            }
+
+            #three-bottom{
+                width: 50%;
+               padding: 2rem 3rem;
+                border-radius: 1rem;
+
+                h2{
+                    font-size: 3rem;
+                    line-height: 3.4rem;
+                }
+            }
+        }
     }
 }
-   
