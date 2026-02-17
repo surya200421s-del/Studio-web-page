@@ -24,9 +24,6 @@ html,body{
     font-family: font3;
     src: url(/fonts/38.woff2);
 }
-section{
-    max-width: 1600px;
-}
 main{
     width: 100%;
     @include flexcolom();
@@ -229,8 +226,55 @@ main{
                     font-size: 1.3rem;
                     opacity: 0.5;
                 }
+            }
+        }
+    }
+
+    #five{
+        width: 100%;
+        background-color: #131313;
+
+        #box{
+            width: 100%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+
+            h1{
+                font-size: 2.3rem;
+                font-family: font1;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            #icon{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                span{
+                padding: 0.4rem 0.4rem;
+                border: 1px solid white;
+                border-radius: 50px;
+                display: none;
+                
+
+                  i{
+                    font-size: 1rem;
+                   }
+
+                }
+
+                small{
+                    font-size: 1rem;
+                    font-family: font2;
+                    text-transform: uppercase;
+                }
 
             }
+
         }
     }
 }
@@ -303,6 +347,16 @@ main{
                             font-size: 2rem;
                         }
                     }
+                }
+            }
+        }
+        
+        #five{
+
+            #box{
+
+                span{
+                    display: inline-block;
                 }
             }
         }
@@ -402,7 +456,7 @@ main{
         }
 
         #four{
-            flex-direction: row;
+        flex-direction: row;
             
              #four-bottom{
                 padding: 4rem 4rem;
@@ -418,6 +472,19 @@ main{
                         p{
                             font-size: 0.9rem;
                         }
+                    }
+                }
+            }
+        }
+            
+        #five{
+
+            #box{
+
+                #icon{
+                    
+                    span{
+                        display: inline-block;
                     }
                 }
             }
@@ -527,6 +594,18 @@ main{
                 h2{
                     font-size: 3rem;
                     line-height: 3.4rem;
+                }
+            }
+        }
+         #five{
+
+            #box{
+
+                #icon{
+                    
+                    span{
+                        display: inline-block;
+                    }
                 }
             }
         }

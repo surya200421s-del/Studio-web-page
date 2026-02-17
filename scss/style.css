@@ -22,10 +22,6 @@ html, body {
   font-family: font3;
   src: url(/fonts/38.woff2);
 }
-section {
-  max-width: 1600px;
-}
-
 main {
   width: 100%;
   display: flex;
@@ -211,6 +207,43 @@ main #four #four-bottom #four-text p {
   font-size: 1.3rem;
   opacity: 0.5;
 }
+main #five {
+  width: 100%;
+  background-color: #131313;
+}
+main #five #box {
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+main #five #box h1 {
+  font-size: 2.3rem;
+  font-family: font1;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+main #five #box #icon {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main #five #box #icon span {
+  padding: 0.4rem 0.4rem;
+  border: 1px solid white;
+  border-radius: 50px;
+  display: none;
+}
+main #five #box #icon span i {
+  font-size: 1rem;
+}
+main #five #box #icon small {
+  font-size: 1rem;
+  font-family: font2;
+  text-transform: uppercase;
+}
 
 @media (min-width: 700px) {
   main #one #bottom #text {
@@ -243,6 +276,9 @@ main #four #four-bottom #four-text p {
   }
   main #four #four-bottom #four-text .para p {
     font-size: 2rem;
+  }
+  main #five #box span {
+    display: inline-block;
   }
 }
 @media (min-width: 1000px) {
@@ -323,6 +359,9 @@ main #four #four-bottom #four-text p {
   main #four #four-bottom #four-text .para p {
     font-size: 0.9rem;
   }
+  main #five #box #icon span {
+    display: inline-block;
+  }
 }
 @media (min-width: 1460px) {
   main #one {
@@ -388,5 +427,8 @@ main #four #four-bottom #four-text p {
   main #four #three-bottom h2 {
     font-size: 3rem;
     line-height: 3.4rem;
+  }
+  main #five #box #icon span {
+    display: inline-block;
   }
 }/*# sourceMappingURL=style.css.map */
