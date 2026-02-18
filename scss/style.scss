@@ -8,9 +8,13 @@ html,body{
     height: 100%;
     font-size: clamp(15px,2vw,18px);
 }
-@mixin flexcolom{
+@mixin flexcolom(){
     display: flex;
     flex-direction: column;
+}
+@mixin background(){
+    background-size: cover;
+    background-position: center;
 }
 @font-face {
     font-family: font1;
@@ -27,11 +31,11 @@ html,body{
 main{
     width: 100%;
     @include flexcolom();
+    background-color: rgb(15, 14, 14);
 
     #one{
         width: 100%;
         @include flexcolom();
-        background-color: rgb(15, 14, 14);
         padding: 4rem 1rem;
         gap: 1rem;
 
@@ -183,6 +187,7 @@ main{
             }
         }
     }
+
     #four{
         width: 100%;
         @include flexcolom();
@@ -277,6 +282,80 @@ main{
 
         }
     }
+
+    #six{
+        width: 100%;
+        @include flexcolom();
+        padding: 1rem;
+        gap: 1rem;
+
+        .card{
+            width: 100%;
+            background: url("/imags/box1.webp");
+            aspect-ratio: 1.1;
+            background-size: cover;
+            background-position: center;
+            @include flexcolom();
+            justify-content: space-between;
+            padding: 1rem;
+            opacity: 0.8;
+            border-radius: 1rem;
+
+            .six-top{
+                width: 100%;
+                display: flex;
+                font-size: 1.4rem;
+                color: white;
+                opacity: 0.6;
+                gap: 1rem;
+                justify-content:flex-end;
+
+                .round{
+                    padding: 0.6rem 0.6rem;
+                    background-color: rgba(255, 255, 255, 0.276);
+                    backdrop-filter: blur;
+                    border-radius: 50px;
+                    border: 1px solid white;
+                }
+            }
+
+            .six-bottom{
+                width: 100%;
+                background-color: rgba(121, 121, 121, 0.42);
+                backdrop-filter: blur(10px);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+                
+
+                h3{
+                    font-size: 1.7rem;
+                    font-family: font2;
+                    text-transform: uppercase;
+                }
+
+                small{
+                    font-size: 1.1rem;
+                    font-family: font2;
+                    text-transform: uppercase;
+                }
+            }
+
+        }
+
+        .card:nth-child(2){
+            background: url("/imags/box2.webp");
+            @include background();
+        }
+
+        .card:nth-child(3){
+            background: url("/imags/box3.webp");
+            @include background();
+        }
+    }
+
 }
 
 
@@ -485,6 +564,20 @@ main{
                     
                     span{
                         display: inline-block;
+                    }
+                }
+            }
+        }
+
+        #six{
+            flex-direction: row;
+
+            .card{
+
+                .six-bottom{
+
+                    h3{
+                        font-size: 1.5rem;
                     }
                 }
             }

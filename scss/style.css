@@ -26,12 +26,12 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: rgb(15, 14, 14);
 }
 main #one {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgb(15, 14, 14);
   padding: 4rem 1rem;
   gap: 1rem;
 }
@@ -244,6 +244,72 @@ main #five #box #icon small {
   font-family: font2;
   text-transform: uppercase;
 }
+main #six {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+main #six .card {
+  width: 100%;
+  background: url("/imags/box1.webp");
+  aspect-ratio: 1.1;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  opacity: 0.8;
+  border-radius: 1rem;
+}
+main #six .card .six-top {
+  width: 100%;
+  display: flex;
+  font-size: 1.4rem;
+  color: white;
+  opacity: 0.6;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+main #six .card .six-top .round {
+  padding: 0.6rem 0.6rem;
+  background-color: rgba(255, 255, 255, 0.276);
+  backdrop-filter: blur;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+main #six .card .six-bottom {
+  width: 100%;
+  background-color: rgba(121, 121, 121, 0.42);
+  backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+main #six .card .six-bottom h3 {
+  font-size: 1.7rem;
+  font-family: font2;
+  text-transform: uppercase;
+}
+main #six .card .six-bottom small {
+  font-size: 1.1rem;
+  font-family: font2;
+  text-transform: uppercase;
+}
+main #six .card:nth-child(2) {
+  background: url("/imags/box2.webp");
+  background-size: cover;
+  background-position: center;
+}
+main #six .card:nth-child(3) {
+  background: url("/imags/box3.webp");
+  background-size: cover;
+  background-position: center;
+}
 
 @media (min-width: 700px) {
   main #one #bottom #text {
@@ -361,6 +427,12 @@ main #five #box #icon small {
   }
   main #five #box #icon span {
     display: inline-block;
+  }
+  main #six {
+    flex-direction: row;
+  }
+  main #six .card .six-bottom h3 {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1460px) {
